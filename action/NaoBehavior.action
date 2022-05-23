@@ -1,0 +1,9 @@
+# Define the goal
+string gesture
+string speech
+---
+# Define the result
+# bool done
+---
+# Define a feedback message
+# bool feedack
