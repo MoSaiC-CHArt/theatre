@@ -52,6 +52,9 @@ class QTPlay:
 
                                             ('key', 'h', 'hello'),('key', 'k', 'dontknow'),('key', 'y', 'oui'),('key', 'n', 'non'),('key', 'f', 'suivi'),('key', 'g', 'public'),
                                             ('key', 'r', 'objetDroite'),('key', 'l', 'objetGauche'),('key', 'p', 'pense'),('key', 'o', 'pense2'),('key', 'm', 'neutral'),
+                                            ('key', 'R', 'really'),('key', 'H', 'comment'),('key', 'J', 'jaime'),('key', 'Y', 'happy'),
+                                            ('key', 'K', 'kisses'),('key', 'E', 'excited'),('key', 't', 'thinking'),('key', 'C', 'curious'),
+                                            ('key', 'F', 'fear'),('key', 'O', 'confused'),('key', 'b', 'bored'),
 
                                             ('key', 'j', 'end')]),
 
@@ -77,7 +80,27 @@ class QTPlay:
                         'pense': ( {'e': 'QT/confused', 'g': 'QT/imitation/hands-on-hip', 's': '\\pau=500\\'}, [('time', 1, 'choice')]),
                         'pense2': ( {'e': 'QT/afraid', 'g': 'QT/touch-head-back', 's': '\\pau=500\\'}, [('time', 1, 'choice')]),
                         'neutral': ( {'e': 'QT/neutral', 'g': 'QT/neutral', 's': '\\pau=500\\'}, [('time', 1, 'choice')]),
+                        'really': ( {'e': 'QT/dirty_face','g': 'QT/surprise', 's': '\\pau=2000\\Vraiment ?'}, [('time', 3, 'choice')]),
+                        'comment': ( {'e':'QT/surpise','g': 'QT/touch-head', 's': '\\pau=2000\\Comment ?'}, [('time', 3, 'choice')]),
+                        'jaime': ( {'e':'QT/happy_blinking','g': 'QT/happy', 's': '\\pau=2000\\jème beaucoup !'}, [('time', 3, 'choice')]),
+                        'happy': ( {'e':'QT/happy_blinking','g': 'QT/happy', 's': '\\pau=500\\ Youpi !'}, [('time', 3, 'choice')]),
 
+                        'kisses': ( {'e':'QT/kiss','g': 'QT/kiss'}, [('time', 3, 'kisses1')]),
+                        'kisses1': ( {'e':'QT/one_eye_wink','g': 'QT/neutral'}, [('time', 3, 'kisses2')]),
+                        'kisses2': ( {'e':'QT/shy','h': [-10.0,+10.0]}, [('time', 3, 'choice')]),
+
+                        'excited': ( {'e':'QT/surpise','g': 'QT/neutral'}, [('time', 3, 'excited1')]),
+                        'excited1': ( {'e':'QT/happy','g': 'QT/neutral'}, [('time', 3, 'choice')]),
+
+                        'thinking': ( {'e':'QT/surpise','g': 'QT/bored'}, [('time', 3, 'choice')]),
+
+                        'curious': ( {'e':'QT/suprise','g': 'QT/neutral'}, [('time', 3, 'curious1')]),
+                        'curious1': ( {'e':'QT/showing_smile','g': 'QT/neutral'}, [('time', 3, 'choice')]),
+
+                        'fear': ( {'e':'QT/cry','g': 'QT/face'}, [('time', 3, 'choice')]),
+
+                        'confused': ( {'e':'QT/confused','g': 'QT/neutral'}, [('time', 3, 'choice')]),
+                        'bored': ( {'e':'QT/yawn','g': 'QT/bored'}, [('time', 3, 'choice')]),
 
                         'end': ((), [('time', 0.1, 'end')]) }
 
